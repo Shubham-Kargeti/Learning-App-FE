@@ -11,6 +11,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import ProtectedProfileQuizRoute from "./components/ProtectedProfileQuizRoute";
 import ProtectedAuthRoute from "./components/ProtectedAuthRoute";
 import StreakContainer from "./containers/StreakContainer";
+import AssessmentSetupContainer from "./containers/AssessmentSetupContainer"
 
 function App() {
   return (
@@ -70,6 +71,14 @@ function App() {
             </ProtectedProfileQuizRoute>
           }
           key="quiz"
+        />
+        <Route
+          path="/assessment/setup"
+          element={
+            <ProtectedRoute>
+              <AssessmentSetupContainer />
+            </ProtectedRoute>
+          }
         />
       </Routes>
     </BrowserRouter>

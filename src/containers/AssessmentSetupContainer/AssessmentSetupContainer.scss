@@ -1,0 +1,221 @@
+/* ---------------------- 
+   PAGE + CARD LAYOUT
+----------------------- */
+
+.assessment-setup-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #f5f6fa;
+  padding: 40px 20px;
+}
+
+.assessment-card {
+  width: 720px;
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.assessment-card h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: left;
+  color: #222;
+}
+
+/* ---------------------- 
+   FORM FIELD BASE STYLES
+----------------------- */
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="file"],
+.form-field input[type="range"] {
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 1.5px solid #dcdcdc;
+  border-radius: 8px;
+  outline: none;
+  background: #fafafa;
+
+  &:focus {
+    border-color: #4a90e2;
+    background: #fff;
+  }
+}
+
+/* ---------------------- 
+   FILE UPLOAD COMPONENT
+----------------------- */
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.file-upload label {
+  font-weight: 500;
+  color: #333;
+}
+
+.upload-box {
+  position: relative;
+  border: 2px dashed #c9c9c9;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+  background: #fafafa;
+  cursor: pointer;
+  transition: 0.25s ease all;
+}
+
+.upload-box p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.upload-box:hover {
+  background: #f0f8ff;
+  border-color: #4a90e2;
+}
+
+.drag-active {
+  .upload-box {
+    background: #e8f3ff;
+    border-color: #4a90e2;
+  }
+}
+
+.upload-box input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* ---------------------- 
+   AVAILABILITY SLIDER
+----------------------- */
+
+input[type="range"] {
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 6px;
+  background: #e2e2e2;
+  outline: none;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #4a90e2;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+/* ---------------------- 
+   SKILL TAGS / CHIPS
+----------------------- */
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.skill-chip {
+  background: #4a90e2;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 14px;
+  font-size: 13px;
+}
+
+/* ---------------------- 
+   RADIO BUTTON GROUP
+----------------------- */
+
+.radio-group {
+  display: flex;
+  gap: 24px;
+  margin-top: 4px;
+}
+
+.radio-group input {
+  accent-color: #4a90e2;
+  cursor: pointer;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.radio-group label[title] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------------------- 
+   SUBMIT BUTTON
+----------------------- */
+
+.submit-btn {
+  width: 100%;
+  padding: 14px 0;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease all;
+
+  &:hover {
+    background: #3a7dcf;
+  }
+}
+
+.submit-btn.disabled,
+.submit-btn:disabled {
+  background: #b8c8dd !important;
+  cursor: not-allowed;
+}
+
+/* ---------------------- 
+   RESPONSIVE DESIGN
+----------------------- */
+
+@media (max-width: 768px) {
+  .assessment-card {
+    width: 100%;
+    padding: 20px;
+  }
+}
