@@ -1,0 +1,32 @@
+.admin-navbar {
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.admin-icons {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.nav-icon {
+  cursor: pointer;
+  color: #444;
+  transition: 0.2s;
+}
+
+.nav-icon:hover {
+  color: #111;
+}
