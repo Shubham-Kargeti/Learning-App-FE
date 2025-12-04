@@ -10,6 +10,9 @@
     background-color: #0b0a17;
     color: #fff;
     border-right: none;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
   }
 
   &.collapsed {
@@ -86,4 +89,39 @@
 .sidebar-icon svg {
   color: #ffffff !important;
   fill: #ffffff !important;
+}
+
+/* Fix Logout button — prevent full red panel */
+.logout-item {
+  margin-top: auto !important;
+  border-radius: 8px !important;
+  margin: 10px 8px !important;
+  transition: background-color 0.25s ease;
+
+  &:hover {
+    background-color: #b91c1c !important;
+    /* nicer red */
+  }
+}
+
+/* Logout icon style */
+.logout-item .MuiSvgIcon-root {
+  color: #ffb3b3 !important;
+}
+
+.logout-item:hover .MuiSvgIcon-root {
+  color: #ffffff !important;
+}
+
+.logout-text {
+  color: #ffb3b3 !important;
+
+  &:hover {
+    color: #fff !important;
+  }
+}
+
+.sidebar-list {
+  padding-top: 10px;
+  flex-grow: 1;
 }

@@ -15,7 +15,7 @@ const AssessmentSetupSubmitButton: React.FC<Props> = ({
       onClick={onClick}
       disabled={disabled || loading}
     >
-      {loading ? "Processing..." : "Start Assessment"}
+      {loading ? "Processing..." : "Set Assessment"}
     </button>
   );
 };
